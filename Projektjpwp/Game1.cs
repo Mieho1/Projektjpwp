@@ -12,7 +12,7 @@ namespace Projektjpwp
         private SpriteFont bubblefont;
 
         public Game1()
-        {gowno
+        {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
