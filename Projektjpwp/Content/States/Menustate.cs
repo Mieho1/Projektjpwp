@@ -37,9 +37,17 @@ namespace Projektjpwp.Content.States
             loadGameButton.Click += LoadGameButton_Click;
             loadGameButton.Click += LoadGameButton_Click;
 
-            var quitGameButton = new Button(buttonTexture, buttonFont)
+            var selectLevelButton = new Button(buttonTexture, buttonFont)
             {
                 Position = new Vector2(300, 300),
+                Text = "Poziom",
+            };
+
+         
+
+            var quitGameButton = new Button(buttonTexture, buttonFont)
+            {
+                Position = new Vector2(300, 350),
                 Text = "Wyjdz",
             };
 
@@ -49,6 +57,7 @@ namespace Projektjpwp.Content.States
       {
         newGameButton,
         loadGameButton,
+        selectLevelButton,
         quitGameButton,
       };
         }
@@ -66,6 +75,10 @@ namespace Projektjpwp.Content.States
         private void LoadGameButton_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Load Game");
+        }
+        private void selectLevelButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("menu wyboru");
         }
 
         private void NewGameButton_Click(object sender, EventArgs e)

@@ -70,7 +70,10 @@ namespace Projektjpwp
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-           
+            _spriteBatch.Begin();
+            _spriteBatch.DrawString(bubblefont, "Skate Alphabet", new Vector2(240, 100), Color.Black);
+            _spriteBatch.End();
+
             _curentState.Draw(gameTime, _spriteBatch);
 
             
@@ -78,10 +81,7 @@ namespace Projektjpwp
             base.Draw(gameTime);
         }
 
-        internal void ChangeState(Gamestate gamestate)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 
 
