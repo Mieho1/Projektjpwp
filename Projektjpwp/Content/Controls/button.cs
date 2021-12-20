@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Projektjpwp.Content.Controls
 {
-    class Button
+   public class Button :component
     {
         #region Fields
 
@@ -56,7 +56,7 @@ namespace Projektjpwp.Content.Controls
             PenColour = Color.Black;
         }
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             var colour = Color.White;
 
@@ -74,7 +74,7 @@ namespace Projektjpwp.Content.Controls
             }
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             _previousMouse = _currentMouse;
             _currentMouse = Mouse.GetState();
