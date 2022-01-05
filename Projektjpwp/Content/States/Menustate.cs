@@ -13,16 +13,20 @@ namespace Projektjpwp.Content.States
     public class Menustate : state
     {
         private List<component> _components;
+        SpriteFont titlefont;
+        Texture2D background;
 
         public Menustate(Game1 game, GraphicsDevice graphicsDevice, ContentManager content)
         : base(game, graphicsDevice, content)
         {
             var buttonTexture = _content.Load<Texture2D>("button/Button");
             var buttonFont = _content.Load<SpriteFont>("Fonts/bubblefont");
+            titlefont = _content.Load<SpriteFont>("Fonts/Title");
+            background = _content.Load<Texture2D>("Background/skate-skeyt-stil-oboi");
 
             var newGameButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(300, 200),
+                Position = new Vector2(300,270),
             Text = "Nowa Gra",
             
             };
@@ -30,7 +34,7 @@ namespace Projektjpwp.Content.States
             newGameButton.Click += NewGameButton_Click;
             var loadGameButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(300, 250),
+                Position = new Vector2(300, 380),
                 Text = "Wczytaj Gre",
             };
 
@@ -39,7 +43,7 @@ namespace Projektjpwp.Content.States
 
             var selectLevelButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(300, 300),
+                Position = new Vector2(300, 490),
                 Text = "Poziom",
             };
 
@@ -47,7 +51,7 @@ namespace Projektjpwp.Content.States
 
             var quitGameButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(300, 350),
+                Position = new Vector2(300,600),
                 Text = "Wyjdz",
             };
 
@@ -65,20 +69,24 @@ namespace Projektjpwp.Content.States
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
-
+            spriteBatch.Draw(background, new Rectangle(0, 0, 1280, 1024), Color.White);
+            spriteBatch.DrawString(titlefont, "Skate Alphabet", new Vector2(420,150), Color.White);
             foreach (var component in _components)
                 component.Draw(gameTime, spriteBatch);
-
             spriteBatch.End();
+
+            
+            
+          
         }
 
         private void LoadGameButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("Load Game");
+            Console.WriteLine("Wczytaj Gre");
         }
         private void selectLevelButton_Click(object sender, EventArgs e)
         {
-            Console.WriteLine("menu wyboru");
+            Console.WriteLine("Poziom");
         }
 
         private void NewGameButton_Click(object sender, EventArgs e)
