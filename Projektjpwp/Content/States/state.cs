@@ -15,6 +15,8 @@ namespace Projektjpwp.Content.States
 
         protected GraphicsDevice _graphicsDevice;
 
+        protected GraphicsDeviceManager _graphics;
+
         protected Game1 _game;
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
 
@@ -30,5 +32,11 @@ namespace Projektjpwp.Content.States
 
         }
         public abstract void Update(GameTime gameTime);
+        
+            
+
+        
+        
     }
+    
 }

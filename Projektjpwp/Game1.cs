@@ -32,6 +32,7 @@ namespace Projektjpwp
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            
         }
 
         protected override void Initialize()
@@ -41,7 +42,6 @@ namespace Projektjpwp
             _graphics.PreferredBackBufferWidth = 1280;
             _graphics.PreferredBackBufferHeight = 1024;
             _graphics.ApplyChanges();
-
             base.Initialize();
         }
 
@@ -64,6 +64,7 @@ namespace Projektjpwp
             }
 
             _curentState.Update(gameTime);
+            
 
             _curentState.PostUpdate(gameTime);
 

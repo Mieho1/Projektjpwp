@@ -26,9 +26,9 @@ namespace Projektjpwp.Content.States
 
             var newGameButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(300,270),
-            Text = "Nowa Gra",
-            
+                Position = new Vector2(300, 270),
+                Text = "Nowa Gra",
+
             };
 
             newGameButton.Click += NewGameButton_Click;
@@ -47,11 +47,11 @@ namespace Projektjpwp.Content.States
                 Text = "Poziom",
             };
 
-         
+
 
             var quitGameButton = new Button(buttonTexture, buttonFont)
             {
-                Position = new Vector2(300,600),
+                Position = new Vector2(300, 600),
                 Text = "Wyjdz",
             };
 
@@ -70,14 +70,14 @@ namespace Projektjpwp.Content.States
         {
             spriteBatch.Begin();
             spriteBatch.Draw(background, new Rectangle(0, 0, 1280, 1024), Color.White);
-            spriteBatch.DrawString(titlefont, "Skate Alphabet", new Vector2(420,150), Color.White);
+            spriteBatch.DrawString(titlefont, "Skate Alphabet", new Vector2(420, 150), Color.White);
             foreach (var component in _components)
                 component.Draw(gameTime, spriteBatch);
             spriteBatch.End();
 
-            
-            
-          
+
+
+
         }
 
         private void LoadGameButton_Click(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace Projektjpwp.Content.States
 
         public override void PostUpdate(GameTime gameTime)
         {
-            // remove sprites if they're not needed
+            
         }
 
         public override void Update(GameTime gameTime)
@@ -104,7 +104,8 @@ namespace Projektjpwp.Content.States
             foreach (var component in _components)
                 component.Update(gameTime);
         }
-
+       
+        
         private void QuitGameButton_Click(object sender, EventArgs e)
         {
             _game.Exit();
@@ -112,5 +113,4 @@ namespace Projektjpwp.Content.States
 
     }
 
-    }
-
+}
