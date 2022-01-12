@@ -14,17 +14,25 @@ namespace Projektjpwp.Content.States
     {
         Texture2D background1;
         Texture2D background2;
+        SpriteFont font;
         Scrolling scrolling1;
         Scrolling scrolling2;
+        int loop =0;
+        string gowno;
 
 
 
 
         public Gamestate(Game1 game, GraphicsDevice graphicsDevice, ContentManager content)
           : base(game, graphicsDevice, content)
-        { 
+        {
+            gowno = loop.ToString();
+            font = _content.Load<SpriteFont>("Fonts/Title");
             scrolling1 = new Scrolling(_content.Load<Texture2D>("Background/alternative"),new Rectangle(0,0,1280,1024));
             scrolling2 = new Scrolling(_content.Load<Texture2D>("Background/alternative"), new Rectangle(1280, 0,1280,1024));
+            
+
+
 
         }
 
@@ -32,7 +40,10 @@ namespace Projektjpwp.Content.States
         {
             spriteBatch.Begin();
             scrolling1.Draw(spriteBatch);
+         
+
             scrolling2.Draw(spriteBatch);
+            spriteBatch.DrawString(font,gowno, new Vector2(200, 200), Color.Black);
 
             spriteBatch.End();
 
@@ -47,11 +58,19 @@ namespace Projektjpwp.Content.States
 
         public override void Update(GameTime gameTime)
         {   //ruchome tlo 
-            if (scrolling1.rectangle.X + scrolling1.texture.Width<= 0)
-                scrolling1.rectangle.X = scrolling2.rectangle.X + scrolling2.texture.Width;
-            if (scrolling2.rectangle.X + scrolling2.texture.Width <= 0)
-                scrolling2.rectangle.X = scrolling1.rectangle.X + scrolling2.texture.Width;
 
+            if (scrolling1.rectangle.X + scrolling1.texture.Width <= 0)
+            {
+                scrolling1.rectangle.X = scrolling2.rectangle.X + scrolling2.texture.Width;
+                loop++;
+                gowno = loop.ToString();
+            }
+            if (scrolling2.rectangle.X + scrolling2.texture.Width <= 0)
+            {
+                scrolling2.rectangle.X = scrolling1.rectangle.X + scrolling2.texture.Width;
+                 loop++;
+                gowno = loop.ToString();
+            }
             scrolling1.Update();
             scrolling2.Update();
 
