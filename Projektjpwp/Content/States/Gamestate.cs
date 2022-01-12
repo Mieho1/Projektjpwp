@@ -23,8 +23,8 @@ namespace Projektjpwp.Content.States
         public Gamestate(Game1 game, GraphicsDevice graphicsDevice, ContentManager content)
           : base(game, graphicsDevice, content)
         { 
-            scrolling1 = new Scrolling(_content.Load<Texture2D>("Background/dobrze"),new Rectangle(0,0,1280,791));
-            scrolling2 = new Scrolling(_content.Load<Texture2D>("Background/dobrze"), new Rectangle(1280, 0,1280, 791));
+            scrolling1 = new Scrolling(_content.Load<Texture2D>("Background/alternative"),new Rectangle(0,0,1280,1024));
+            scrolling2 = new Scrolling(_content.Load<Texture2D>("Background/alternative"), new Rectangle(1280, 0,1280,1024));
 
         }
 
