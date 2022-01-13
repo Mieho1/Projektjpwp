@@ -83,6 +83,7 @@ namespace Projektjpwp.Content.States
         private void LoadGameButton_Click(object sender, EventArgs e)
         {
             Console.WriteLine("Wczytaj Gre");
+            
         }
         private void selectLevelButton_Click(object sender, EventArgs e)
         {

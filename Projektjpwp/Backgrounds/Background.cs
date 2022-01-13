@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.Xna.Framework.Input;
 
 
 namespace Projektjpwp.Backgrounds
@@ -20,7 +21,8 @@ namespace Projektjpwp.Backgrounds
             spriteBatch.Draw(texture, rectangle, Color.White);
 
         }
-       
+        
+
     }
 
 }

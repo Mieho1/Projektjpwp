@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Projektjpwp.Backgrounds;
 using Projektjpwp.Content.Controls;
+using Microsoft.Xna.Framework.Input;
 
 namespace Projektjpwp.Content.States
 {
@@ -21,6 +22,7 @@ namespace Projektjpwp.Content.States
         Scrolling scrolling2;
         int loop =1;
         string gowno;
+        
 
 
 
@@ -32,6 +34,7 @@ namespace Projektjpwp.Content.States
             font = _content.Load<SpriteFont>("Fonts/Title");
             var buttonTexture = _content.Load<Texture2D>("button/Button");
             var buttonFont = _content.Load<SpriteFont>("Fonts/bubblefont");
+            var texture = _content.Load<Texture2D>("Objects1/skater");
             scrolling1 = new Scrolling(_content.Load<Texture2D>("Background/alternative"),new Rectangle(0,0,1280,1024));
             scrolling2 = new Scrolling(_content.Load<Texture2D>("Background/alternative"), new Rectangle(1280, 0,1280,1024));
             var menubutton = new Button(buttonTexture, buttonFont)
@@ -44,6 +47,8 @@ namespace Projektjpwp.Content.States
         menubutton
       };
             menubutton.Click += menuButton_Click;
+            
+            
 
         }
 
@@ -93,6 +98,15 @@ namespace Projektjpwp.Content.States
             }
             scrolling1.Update();
             scrolling2.Update();
+            // pobiera co jest wcisniete
+            KeyboardState state = Keyboard.GetState();
+            if (state.IsKeyDown(Keys.Escape))
+           _game.ChangeState(new Menustate(_game, _graphicsDevice, _content));
+
+
+
+
+            
 
         }
     }
