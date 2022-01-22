@@ -15,6 +15,7 @@ namespace Projektjpwp.Backgrounds
     {
         public Texture2D texture;
         public Rectangle rectangle;
+        public Skater skater;
         
         public void Draw(SpriteBatch spriteBatch)
         {

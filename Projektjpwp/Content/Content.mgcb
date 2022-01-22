@@ -92,6 +92,20 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/bubblefont.spritefont
 
+#begin Fonts/PIPI.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/PIPI.spritefont
+
+#begin Fonts/Pixel.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/Pixel.spritefont
+
 #begin Fonts/Title.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
@@ -99,7 +113,7 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/Title.spritefont
 
-#begin Objects/Skater_sprites/Sprite 01.png
+#begin Objects/Pipes Sprite 33.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -109,9 +123,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 01.png
+/build:Objects/Pipes Sprite 33.png
 
-#begin Objects/Skater_sprites/Sprite 02.png
+#begin sprites_skater/Sprite 01.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -121,9 +135,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 02.png
+/build:sprites_skater/Sprite 01.png
 
-#begin Objects/Skater_sprites/Sprite 03.png
+#begin sprites_skater/Sprite 02.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -133,9 +147,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 03.png
+/build:sprites_skater/Sprite 02.png
 
-#begin Objects/Skater_sprites/Sprite 04.png
+#begin sprites_skater/Sprite 03.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -145,9 +159,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 04.png
+/build:sprites_skater/Sprite 03.png
 
-#begin Objects/Skater_sprites/Sprite 05.png
+#begin sprites_skater/Sprite 04.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -157,9 +171,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 05.png
+/build:sprites_skater/Sprite 04.png
 
-#begin Objects/Skater_sprites/Sprite 06.png
+#begin sprites_skater/Sprite 05.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -169,9 +183,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 06.png
+/build:sprites_skater/Sprite 05.png
 
-#begin Objects/Skater_sprites/Sprite 07.png
+#begin sprites_skater/Sprite 06.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -181,9 +195,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 07.png
+/build:sprites_skater/Sprite 06.png
 
-#begin Objects/Skater_sprites/Sprite 08.png
+#begin sprites_skater/Sprite 07.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -193,9 +207,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 08.png
+/build:sprites_skater/Sprite 07.png
 
-#begin Objects/Skater_sprites/Sprite 09.png
+#begin sprites_skater/Sprite 08.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -205,9 +219,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 09.png
+/build:sprites_skater/Sprite 08.png
 
-#begin Objects/Skater_sprites/Sprite 10.png
+#begin sprites_skater/Sprite 09.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -217,9 +231,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 10.png
+/build:sprites_skater/Sprite 09.png
 
-#begin Objects/Skater_sprites/Sprite 11.png
+#begin sprites_skater/Sprite 10.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -229,9 +243,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 11.png
+/build:sprites_skater/Sprite 10.png
 
-#begin Objects/Skater_sprites/Sprite 12.png
+#begin sprites_skater/Sprite 11.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -241,9 +255,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 12.png
+/build:sprites_skater/Sprite 11.png
 
-#begin Objects/Skater_sprites/Sprite 13.png
+#begin sprites_skater/Sprite 12.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -253,9 +267,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 13.png
+/build:sprites_skater/Sprite 12.png
 
-#begin Objects/Skater_sprites/Sprite 14.png
+#begin sprites_skater/Sprite 13.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -265,9 +279,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 14.png
+/build:sprites_skater/Sprite 13.png
 
-#begin Objects/Skater_sprites/Sprite 15.png
+#begin sprites_skater/Sprite 14.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -277,9 +291,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 15.png
+/build:sprites_skater/Sprite 14.png
 
-#begin Objects/Skater_sprites/Sprite 16.png
+#begin sprites_skater/Sprite 15.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -289,9 +303,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 16.png
+/build:sprites_skater/Sprite 15.png
 
-#begin Objects/Skater_sprites/Sprite 17.png
+#begin sprites_skater/Sprite 16.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -301,9 +315,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 17.png
+/build:sprites_skater/Sprite 16.png
 
-#begin Objects/Skater_sprites/Sprite 18.png
+#begin sprites_skater/Sprite 17.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -313,9 +327,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 18.png
+/build:sprites_skater/Sprite 17.png
 
-#begin Objects/Skater_sprites/Sprite 19.png
+#begin sprites_skater/Sprite 18.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -325,9 +339,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 19.png
+/build:sprites_skater/Sprite 18.png
 
-#begin Objects/Skater_sprites/Sprite 20.png
+#begin sprites_skater/Sprite 19.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -337,9 +351,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 20.png
+/build:sprites_skater/Sprite 19.png
 
-#begin Objects/Skater_sprites/Sprite 21.png
+#begin sprites_skater/Sprite 20.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -349,9 +363,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 21.png
+/build:sprites_skater/Sprite 20.png
 
-#begin Objects/Skater_sprites/Sprite 22.png
+#begin sprites_skater/Sprite 21.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -361,9 +375,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 22.png
+/build:sprites_skater/Sprite 21.png
 
-#begin Objects/Skater_sprites/Sprite 23.png
+#begin sprites_skater/Sprite 22.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -373,9 +387,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 23.png
+/build:sprites_skater/Sprite 22.png
 
-#begin Objects/Skater_sprites/Sprite 24.png
+#begin sprites_skater/Sprite 23.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -385,9 +399,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 24.png
+/build:sprites_skater/Sprite 23.png
 
-#begin Objects/Skater_sprites/Sprite 25.png
+#begin sprites_skater/Sprite 24.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -397,5 +411,17 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Objects/Skater_sprites/Sprite 25.png
+/build:sprites_skater/Sprite 24.png
+
+#begin sprites_skater/Sprite 25.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:sprites_skater/Sprite 25.png
 

@@ -8,36 +8,32 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Input;
 
-namespace Projektjpwp.Backgrounds
+namespace Projektjpwp.Obstacles
 {
-    class Scrolling: Background
+    public class Pipe
     {
         public bool space = false;
-       
+        public Rectangle size;
+        public Texture2D sprite;
 
-        public Scrolling(Texture2D newTexture, Rectangle newRectangle,Skater skater)
+        public Pipe(Rectangle size, Texture2D sprite)
         {
-
-            this.skater = skater;
-            texture = newTexture;
-            rectangle = newRectangle;
+            this.size = size;
+            this.sprite = sprite;
 
         }
-
-        
-       
         public void Update()
         {
-            
             KeyboardState state = Keyboard.GetState();
             if (state.IsKeyDown(Keys.Space))
                 space = true;
+            if (space == true)
+                size.X -= 5;
 
-            if (space == true && skater.lifes>0) 
-           rectangle.X -= 5;
-           
 
         }
-            
+
+
+
     }
 }
