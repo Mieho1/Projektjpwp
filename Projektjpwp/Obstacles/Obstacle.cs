@@ -7,42 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Input;
+using Projektjpwp.Backgrounds;
 
-namespace Projektjpwp.Backgrounds
+
+namespace Projektjpwp.Obstacles
 {
-    public class Scrolling: Background
+    public class Obstacle
     {
-        public bool space = false;
-        public int speed;
+        public bool space=false;
+        public Rectangle size;
+        public Texture2D sprite;
+        public int speed; 
 
-        
-      
-
-        public Scrolling(Texture2D newTexture, Rectangle newRectangle,Skater skater,int speed)
+        public Obstacle(Rectangle size, Texture2D sprite, int speed)
         {
-            
-            this.skater = skater;
-            texture = newTexture;
-            rectangle = newRectangle;
+            this.size = size;
+            this.sprite = sprite;
             this.speed = speed;
 
         }
-
-        
-       
         public void Update()
         {
-            
             KeyboardState state = Keyboard.GetState();
             if (state.IsKeyDown(Keys.Space))
                 space = true;
+            if (space == true)
+                size.X -= speed;
 
-            if (space == true )
-                rectangle.X -= speed;
-            
-           
 
         }
-            
     }
 }

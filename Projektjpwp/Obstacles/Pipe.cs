@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework.Input;
+using Projektjpwp.Backgrounds;
 
 namespace Projektjpwp.Obstacles
 {
@@ -15,11 +16,15 @@ namespace Projektjpwp.Obstacles
         public bool space = false;
         public Rectangle size;
         public Texture2D sprite;
+        public int speed;
+        
+        
 
-        public Pipe(Rectangle size, Texture2D sprite)
+        public Pipe(Rectangle size, Texture2D sprite,int speed)
         {
             this.size = size;
             this.sprite = sprite;
+            this.speed = speed;
 
         }
         public void Update()
@@ -27,8 +32,8 @@ namespace Projektjpwp.Obstacles
             KeyboardState state = Keyboard.GetState();
             if (state.IsKeyDown(Keys.Space))
                 space = true;
-            if (space == true)
-                size.X -= 5;
+            if (space == true )
+                size.X -= speed;
 
 
         }

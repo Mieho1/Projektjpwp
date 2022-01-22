@@ -11,7 +11,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Projektjpwp.Backgrounds
 {
- class Background
+ public class Background
     {
         public Texture2D texture;
         public Rectangle rectangle;
