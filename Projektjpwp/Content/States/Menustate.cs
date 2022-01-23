@@ -30,22 +30,10 @@ namespace Projektjpwp.Content.States
                 Text = "Nowa Gra",
 
             };
-
             newGameButton.Click += NewGameButton_Click;
-            var loadGameButton = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(300, 380),
-                Text = "Wczytaj Gre",
-            };
 
-            loadGameButton.Click += LoadGameButton_Click;
-            loadGameButton.Click += LoadGameButton_Click;
 
-            var selectLevelButton = new Button(buttonTexture, buttonFont)
-            {
-                Position = new Vector2(300, 490),
-                Text = "Poziom",
-            };
+
 
 
 
@@ -60,8 +48,6 @@ namespace Projektjpwp.Content.States
             _components = new List<component>()
       {
         newGameButton,
-        loadGameButton,
-        selectLevelButton,
         quitGameButton,
       };
         }
@@ -80,15 +66,8 @@ namespace Projektjpwp.Content.States
 
         }
 
-        private void LoadGameButton_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Wczytaj Gre");
-            
-        }
-        private void selectLevelButton_Click(object sender, EventArgs e)
-        {
-            Console.WriteLine("Poziom");
-        }
+       
+        
 
         private void NewGameButton_Click(object sender, EventArgs e)
         {

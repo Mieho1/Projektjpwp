@@ -17,12 +17,11 @@ namespace Projektjpwp.Content.States
     public class Gamestate : state
     {
         int klok=0;
-        Texture2D background1;
-        Texture2D background2;
         private List<component> menu;
         SpriteFont font;
         SpriteFont buttonFont;
         SpriteFont pixelFont;
+        SpriteFont Mario;
         Scrolling scrolling1;
         Scrolling scrolling2;
         int loop = 1;
@@ -32,12 +31,11 @@ namespace Projektjpwp.Content.States
         int speed = 5;
         int timer;
         int frametimer = 60;
-        int frametimmerfall = 60;
+        float frametimmerfall = 60;
         int hitbox1;
         int hitbox2;
         int hitbox3;
         int hitbox4;
-        int po;
         int skaterY = 625;
         bool colision = false;
         bool flagkey = false;
@@ -45,7 +43,6 @@ namespace Projektjpwp.Content.States
         bool level2 = false;
         bool gameover1 = false;
         int helpin = 0;
-        Keys A;
 
         KeyboardState _currentkey;
         KeyboardState _previouskey;
@@ -259,32 +256,9 @@ namespace Projektjpwp.Content.States
 
 
         }
-        void fall(int frametimmer, Skater skater)
+        void fall(float frametimmer, Skater skater)
         {
-            switch (frametimer / 10)
-            {
-                case 6:
-                    skater.skatersprite = _content.Load<Texture2D>("sprites_skater/Sprite 25");
-
-                    break;
-                case 5:
-                    skater.skatersprite = _content.Load<Texture2D>("sprites_skater/Sprite 21");
-                    break;
-                case 4:
-                    skater.skatersprite = _content.Load<Texture2D>("sprites_skater/Sprite 22");
-                    break;
-                case 3:
-                    skater.skatersprite = _content.Load<Texture2D>("sprites_skater/Sprite 23");
-                    break;
-                case 2:
-                    skater.skatersprite = _content.Load<Texture2D>("sprites_skater/Sprite 24");
-                    break;
-                case 1:
-                    skater.skatersprite = _content.Load<Texture2D>("sprites_skater/Sprite 25");
-                    break;
-            }
-
-
+            skater.skatersprite = _content.Load<Texture2D>("sprites_skater/Sprite 25");
 
         }
         void NextObject(int i)
@@ -321,9 +295,9 @@ namespace Projektjpwp.Content.States
             font = _content.Load<SpriteFont>("Fonts/Title");
             var buttonTexture = _content.Load<Texture2D>("button/Button");
             buttonFont = _content.Load<SpriteFont>("Fonts/bubblefont");
-
+            Mario= _content.Load<SpriteFont>("Fonts/Pixel");
             pixelFont = _content.Load<SpriteFont>("Fonts/PIPI");
-            skater = new Skater(2, new Rectangle(0, skaterY, 300, 300), _content.Load<Texture2D>("sprites_skater/Sprite 12"));
+            skater = new Skater(3, new Rectangle(0, skaterY, 300, 300), _content.Load<Texture2D>("sprites_skater/Sprite 12"));
 
             objects = new List<Obstacle> { new Obstacle(new Rectangle(600, 725, 200, 200), _content.Load<Texture2D>("Objects/Pipes Sprite 33"), speed, Rndchar()),
                 new Obstacle(new Rectangle(1600, 725, 200, 200), _content.Load<Texture2D>("Objects/Pipes Sprite 34 Variation"), speed, Rndchar()),
@@ -366,13 +340,18 @@ namespace Projektjpwp.Content.States
             spriteBatch.Draw(objects[helpin + 1].sprite, objects[helpin + 1].size, Color.White);
             spriteBatch.Draw(objects[helpin + 2].sprite, objects[helpin + 2].size, Color.White);
             spriteBatch.Draw(objects[helpin + 3].sprite, objects[helpin + 3].size, Color.White);
-            spriteBatch.DrawString(font, gowno, new Vector2(200, 200), Color.Black);
-            spriteBatch.DrawString(font, skater.lifes.ToString(), new Vector2(250, 250), Color.White);
-            spriteBatch.DrawString(pixelFont, objects[helpin].leather.ToString(), new Vector2(objects[helpin].size.X + 70, 700), Color.Red);
-            spriteBatch.DrawString(pixelFont, objects[helpin + 1].leather.ToString(), new Vector2(objects[helpin + 1].size.X + 70, 700), Color.Red);
-            spriteBatch.DrawString(pixelFont, objects[helpin + 2].leather.ToString(), new Vector2(objects[helpin + 2].size.X + 70, 700), Color.Red);
-            spriteBatch.DrawString(pixelFont, objects[helpin + 3].leather.ToString(), new Vector2(objects[helpin + 3].size.X + 70, 700), Color.Red);
+            spriteBatch.DrawString(font,"Lifes:", new Vector2(50,150), Color.Black);
+            spriteBatch.DrawString(font, skater.lifes.ToString(), new Vector2(250,150), Color.Red);
+            spriteBatch.DrawString(pixelFont, objects[helpin].leather.ToString(), new Vector2(objects[helpin].size.X + 70, 700), Color.White);
+            spriteBatch.DrawString(pixelFont, objects[helpin + 1].leather.ToString(), new Vector2(objects[helpin + 1].size.X + 70, 700), Color.White);
+            spriteBatch.DrawString(pixelFont, objects[helpin + 2].leather.ToString(), new Vector2(objects[helpin + 2].size.X + 70, 700), Color.White);
+            spriteBatch.DrawString(pixelFont, objects[helpin + 3].leather.ToString(), new Vector2(objects[helpin + 3].size.X + 70, 700), Color.White);
             spriteBatch.Draw(skater.skatersprite, skater.size, skater.color);
+            if (skater.lifes == 0)
+            {
+             spriteBatch.DrawString(Mario,"GAME OVER", new Vector2(230, 400), Color.Black);
+            }
+
 
             // spriteBatch.DrawString(pixelFont, "Press to start", new Vector2(500, 500), Color.Black); narazie kom
             foreach (var component in menu)
@@ -403,7 +382,7 @@ namespace Projektjpwp.Content.States
             {
                 frametimer = frametimer - 2;
             }
-            frametimmerfall--;
+            frametimmerfall--; 
             if (frametimer < 0)
             {
                 frametimer = 0;
@@ -434,12 +413,11 @@ namespace Projektjpwp.Content.States
             hitbox3 = 100;
             hitbox4 = 0;
             #region pipe1
-            po = 60;
             for (int i = 0; i < 4; i++)
             {
                 if (_currentkey.IsKeyUp(objects[i].leather) && _previouskey.IsKeyDown(objects[i].leather) && objects[i].size.X >= hitbox1 && objects[i].size.X <= hitbox2 && flagkey1 == false)
                 {
-                    skater.lifes += 1;
+                    
                     flagkey = true;
                     frametimer = 60;
                     flagkey1 = true;
@@ -507,13 +485,16 @@ namespace Projektjpwp.Content.States
                 objects[3].speed = 0;
                 scrolling1.speed = 0;
                 scrolling2.speed = 0;
-                frametimer = 60;
+                frametimmerfall = 60;
                 gameover1 = true;
 
+                if (state.IsKeyDown(Keys.Space))
+                    _game.ChangeState(new Gamestate(_game, _graphicsDevice, _content));
             }
+
             if (gameover1 == true)
             {
-                fall(frametimer, skater);
+                fall(frametimmerfall, skater);
             }
 
 

@@ -92,6 +92,13 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/bubblefont.spritefont
 
+#begin Fonts/File.spritefont
+/importer:FontDescriptionImporter
+/processor:LocalizedFontProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/File.spritefont
+
 #begin Fonts/PIPI.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
