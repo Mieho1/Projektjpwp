@@ -161,6 +161,18 @@
 /processorParam:TextureFormat=Color
 /build:Objects/Pipes Sprite 33.png
 
+#begin Objects/Pipes Sprite 34 Variation.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Objects/Pipes Sprite 34 Variation.png
+
 #begin sprites_skater/Sprite 01.png
 /importer:TextureImporter
 /processor:TextureProcessor

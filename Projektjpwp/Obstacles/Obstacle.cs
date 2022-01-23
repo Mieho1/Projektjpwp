@@ -18,9 +18,10 @@ namespace Projektjpwp.Obstacles
         public Rectangle size;
         public Texture2D sprite;
         public int speed;
-        string leather;
-
-        public Obstacle(Rectangle size, Texture2D sprite, int speed,string leather)
+        public Keys leather;
+      
+        
+        public Obstacle( Rectangle size,Texture2D sprite, int speed,Keys leather)
         {
             this.size = size;
             this.sprite = sprite;
@@ -28,6 +29,7 @@ namespace Projektjpwp.Obstacles
             this.leather = leather;
 
         }
+        
         public void Update()
         {
             KeyboardState state = Keyboard.GetState();
@@ -36,8 +38,12 @@ namespace Projektjpwp.Obstacles
             if (space == true)
                 size.X -= speed;
 
-            
 
         }
+       
+            
+
+
+    
     }
 }
