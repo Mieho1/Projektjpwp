@@ -17,13 +17,15 @@ namespace Projektjpwp.Obstacles
         public bool space=false;
         public Rectangle size;
         public Texture2D sprite;
-        public int speed; 
+        public int speed;
+        string leather;
 
-        public Obstacle(Rectangle size, Texture2D sprite, int speed)
+        public Obstacle(Rectangle size, Texture2D sprite, int speed,string leather)
         {
             this.size = size;
             this.sprite = sprite;
             this.speed = speed;
+            this.leather = leather;
 
         }
         public void Update()
@@ -34,6 +36,7 @@ namespace Projektjpwp.Obstacles
             if (space == true)
                 size.X -= speed;
 
+            
 
         }
     }

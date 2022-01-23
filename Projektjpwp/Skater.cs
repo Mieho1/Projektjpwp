@@ -16,12 +16,14 @@ namespace Projektjpwp
         public int lifes;
         public Rectangle size;
         public Texture2D skatersprite;
+        public Color color;
 
         public Skater(int lifes, Rectangle size,Texture2D skatersprite)
         {
             this.lifes = lifes;
             this.size = size;
             this.skatersprite = skatersprite;
+            color = Color.White;
         }
         
 
